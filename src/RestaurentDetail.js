@@ -42,7 +42,7 @@ const RestaurentDetail = () => {
             <li key={item.id}>{item.name}</li>
           )
           )}
-         </ul>      
+         </ul>      //gjugjkgkguukgkguk
    </div>                          
     </div> 
   )
