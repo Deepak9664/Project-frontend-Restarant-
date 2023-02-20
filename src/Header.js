@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useOnline from "./Utils/useOnline";
 import Instamart from "./Instamart";
 import UserContext from "./Utils/userContext";
+import { useSelector } from "react-redux";
 
 
 const Title =()=>(
@@ -17,6 +18,9 @@ function  Header() {
     const [isLoggedIn,setisLoggedIn]=useState(false);
     const isOnline = useOnline()
     const {user} =useContext(UserContext) //user from utils usercontext extraxting and des
+
+    const cartItems =useSelector( store=>store.cart.items);  // will give accss to the store
+    console.log("cartitem",cartItems)
     return (
     <div className="flex justify-between bg-blue-100 shadow-lg">
       <Title/>
@@ -34,7 +38,8 @@ function  Header() {
          <Link to="/instamart"> 
          <li className="px-2">Instamart</li>
          </Link>
-          <li className="px-2">Cartt</li>
+          <li className="px-2">Cart -{cartItems.length} items</li>
+          
         </ul>
       </div>
       <h2>{isOnline ? "✅" : "🔴"}</h2>
