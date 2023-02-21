@@ -11,10 +11,10 @@ const FootItem=({name,
 price})=>{
      
     return(
-    <div className="w-56 p-2 m-2 shadow-lg bg-lime-300">
+    <div className="w-60 p-4 m-3 h-64 rounded-md overflow-scroll hover:shadow-lg  ">
        <img src={IMG_CDN_URL+cloudinaryImageId}/>
-      <h2 className="font-bold text-xl">{name}</h2>
-      <h3 className="text-ml">{description}</h3>
+      <h2 className="text-2xl font-semibold py-1">{name}</h2>
+      <h3 className="text-2xl font-semibold py-1">{description}</h3>
       <h4>{lastMileTravelString}</h4>
       <h5 className="font-bold"> Rupees:{price/100}</h5>
     </div>

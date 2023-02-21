@@ -16,7 +16,7 @@ const Restaurentcard=({name,
           }
         />
       <h2 className="font-bold text-xl">{name}</h2>
-      <h3 className="text-ml">{cuisines.join(",")}</h3>
+      <h3 className="text-xs">{cuisines.join(",")}</h3>
       <h4>{lastMileTravelString}</h4>
       <h5 className="font-bold">{user.name}-{user.email}</h5>
     </div>

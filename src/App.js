@@ -30,13 +30,13 @@ const App =()=>{
     user,
     setuser:setuser}}>
     <Header/>
-    <Outlet/>                         // all children will go to the outlet
+    <Outlet/>                         
     <Footer/>
     </UserContext.Provider>
     </Provider>
   )
 }
-
+// all children will go to the outlet
 
 
 

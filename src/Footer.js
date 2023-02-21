@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Footer=()=>{
-    return <h4>footer</h4>
+    return (
+    <p className="text-center my-4">
+      @ Created by Deepak Singh
+    </p>
+    )
    }
 
 export default Footer
