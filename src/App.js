@@ -8,6 +8,7 @@ import {Outlet} from "react-router-dom"
 import UserContext from "./Utils/userContext";
 import store from "./Utils/Store";
 import {Provider} from"react-redux";
+import Cart from "./Cart";
 // import About from "./About";
 // import Contact from "./Contact";
 // // import Instamart from "./Instamart";

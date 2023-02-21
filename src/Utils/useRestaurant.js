@@ -14,7 +14,7 @@ useEffect(()=>{
       // const data =  await fetch(FETCH_RUL+resId);
       const data = await fetch(`${FETCH_RUL}${resId}`);
       const json = await data.json();
-       console.log( "resss1" ,json.data)
+      //  console.log( "resss1" ,json.data)
       setRestaurantMenu(json.data);
       
     }

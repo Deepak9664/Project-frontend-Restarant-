@@ -25,7 +25,7 @@ import { useDispatch } from 'react-redux';
     const getRestaurant = async (resId) => {
       const data = await fetch(`${FETCH_RUL}${resId}`);
       const restarant = await data.json();
-      console.log( "resss2" ,restarant.data)
+      // console.log( "resss2" ,restarant.data)
       const itemsData = restarant.data.menu.items;
       if (typeof Object.values(itemsData) !== undefined) {
         setrestarantmenu(Object.values(itemsData));
@@ -39,20 +39,22 @@ import { useDispatch } from 'react-redux';
     dispatch(addItem(item))
   }
   return (
-    <div className="flex">
+    <div className= " flex  p-2 space-x-2 justify-center mt-10">
       
         <div>
           <h1>restaurant id:{resId}</h1>
-           <h2>{restaurantMenu?.name}</h2>
-           <img src={IMG_CDN_URL + restaurantMenu?.cloudinaryImageId} />
+           <h2 className='font-bold'>{restaurantMenu?.name}</h2>
+           <img className="w-96 rounded-md" src={IMG_CDN_URL + restaurantMenu?.cloudinaryImageId} />
+           <div className="justify-center">
            <h3>{restaurantMenu?.area}</h3>
-           <h3>{restaurantMenu?.city}</h3>
-           <h3>{restaurantMenu?.avgRating} stars</h3>
+           <h3 className="text-2xl">{restaurantMenu?.city}</h3>
+           <h3 className="text-2xl">{restaurantMenu?.avgRating} stars</h3>
            <h3>{restaurantMenu?.costForTwoMsg}</h3>
            <h3>{restaurantMenu?.type}</h3>
+           </div>
         </div>
     
-      <div className="border p-6 space-y-2">
+        <div className=" flex flex-col border p-6 space-y-2 justify-center">
         <h1 className="text-3xl font-semibold">Menu</h1>
         <ul data-testid="menu" className="items-center">
           {restaurantmenu?.map((item) => (

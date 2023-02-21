@@ -24,7 +24,7 @@ import UserContext from "./Utils/userContext";
        console.log(json)
        //optional chaining
        setallRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-       setfilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+       setfilteredRestaurants( json?.data?.cards[2]?.data?.data?.cards);
      }
     const isOnline = useOnline();
     if(!isOnline){

@@ -10,6 +10,7 @@ import Body from './Body';
 import RestaurentDetail from './RestaurentDetail';
 import Profile from './Profile';
 import Instamart from './Instamart';
+import Cart from './Cart';
 
 
 
@@ -44,6 +45,10 @@ const appRouter=createBrowserRouter([{
   {
     path:"/instamart",
     element:<Suspense><Instamart/></Suspense>
+  },
+  {
+    path:"/cart",
+    element:<Cart/>
   }
 ]
   }
