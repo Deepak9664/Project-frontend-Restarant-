@@ -39,13 +39,14 @@ import { useDispatch } from 'react-redux';
     dispatch(addItem(item))
   }
   return (
-    <div className= " flex  p-2 space-x-2 justify-center mt-10">
+    <>
+    <div className=" flex  p-16 space-x-6 justify-center mt-24 bg-gray-900 text-gray-100">
       
-        <div>
+        
           <h1>restaurant id:{resId}</h1>
            <h2 className='font-bold'>{restaurantMenu?.name}</h2>
            <img className="w-96 rounded-md" src={IMG_CDN_URL + restaurantMenu?.cloudinaryImageId} />
-           <div className="justify-center">
+           <div className="justify-center space-y-1">
            <h3>{restaurantMenu?.area}</h3>
            <h3 className="text-2xl">{restaurantMenu?.city}</h3>
            <h3 className="text-2xl">{restaurantMenu?.avgRating} stars</h3>
@@ -56,13 +57,14 @@ import { useDispatch } from 'react-redux';
     
         <div className=" flex flex-col border p-6 space-y-2 justify-center">
         <h1 className="text-3xl font-semibold">Menu</h1>
-        <ul data-testid="menu" className="items-center">
+        <ul data-testid="menu" className="items-center text-xl text-black">
           {restaurantmenu?.map((item) => (
-            <li key={item.id}>{item.name}- <button className='p-1 m-1 bg-green-50' onClick={()=>{AddfooItem(item)}}>Add</button></li>
+            <li key={item.id}>{item.name}- <button className='p-1 rounded-md bg-gray-100' onClick={()=>{AddfooItem(item)}}>Add</button></li>
           ))}
         </ul>
       </div>
-    </div>
+    
+    </>
   );
 };
 

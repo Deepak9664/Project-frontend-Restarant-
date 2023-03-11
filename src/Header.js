@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 const Title =()=>(
     <a href="./">
-    <img className="h-28 px-2 rounded-[12px]" alt="logo" src="https://cdn.dribbble.com/users/1309691/screenshots/16842018/media/bd0f864b4d0ef49952871cb3bef269de.jpg"
+    <img className="h-36 px-2 rounded-[12px]" alt="logo" src="https://cdn.dribbble.com/users/1309691/screenshots/16842018/media/bd0f864b4d0ef49952871cb3bef269de.jpg"
     />
     </a>
   );
@@ -22,10 +22,10 @@ function  Header() {
     const cartItems =useSelector( store=>store.cart.items);  // will give accss to the store
     console.log("cartitem",cartItems)
     return (
-    <div className="flex justify-between bg-blue-100 shadow-lg">
+    <div className="flex justify-between bg-gray-100 h-36 text-2xl text-black w-full shadow-lg">
       <Title/>
       <div className="nav-items">
-        <ul className="flex py-10">
+        <ul className="flex py-14 px-20">
           <Link to='/'>
             <li className="px-2">Home</li>
           </Link>

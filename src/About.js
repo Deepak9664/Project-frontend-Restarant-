@@ -6,7 +6,7 @@ const About2 = () => {
   
   return (
     <div>
-      <h1>This All About page</h1>
+      <h1 className="p-3 space-y-3">This All About page</h1>
       <Profilefunctional name={"Deepak"}/>
       <Profile name={"Deepak singh class"}/>
       {/* <Outlet/> */} 

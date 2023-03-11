@@ -21,7 +21,7 @@ import UserContext from "./Utils/userContext";
      async function getRestarants(){
        const data =  await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING")
        const json = await data.json();
-       console.log(json)
+       console.log(json ,"dataaaa")
        //optional chaining
        setallRestaurants(json?.data?.cards[2]?.data?.data?.cards);
        setfilteredRestaurants( json?.data?.cards[2]?.data?.data?.cards);
@@ -37,22 +37,22 @@ import UserContext from "./Utils/userContext";
      return  allRestaurants.length === 0 ? (
      <Shimmer/>):(
        <>
-       <div className="search-container p-5 m-2 bg-pink-100 my-5">
-         <input type="text" className="focus:bg-green-200" placeholder="search" value={searchinpuTxt} onChange={(e)=>{
+       <div className="search-container p-8  m-4 bg-gray-200 shadow-2xl my-5">
+         <input  className="w-1/4 border border-gray-200 p-2 rounded-l-full" type="text" value={searchinpuTxt} onChange={(e)=>{
            setSearchtInput(e.target.value)
          }}/>
-         <button className="p-2 m-2 bg-green-500 hover:bg-sky-700 text-white rounded-md" onClick={(e)=>{
+         <button className="border border-gray-400 p-2 rounded-r-full bg-slate-100" onClick={(e)=>{
            const data = filterData(searchinpuTxt,allRestaurants)
            setfilteredRestaurants(data)
          }}>search</button> 
-         <input value ={user.name} onChange={e=>setuser({
+         {/* <input value ={user.name} onChange={e=>setuser({
           name:e.target.value,
           email:"newemail@gmail.com"
          })}></input>
           <input value ={user.email} onChange={e=>setuser({
           ...user,
           email:"newemail@gmail.com"
-         })}></input>
+         })}></input> */}
         
           
        </div>
